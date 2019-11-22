@@ -1,0 +1,140 @@
+/* Parte onde se altera o geral do site */
+*{
+    outline: none;
+    list-style-type: none;
+    text-decoration: none !important;
+    padding-inline-start:0;
+}
+img{
+    width: 100%;
+}
+.linear{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.coluna{
+    margin-left:20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+.divisoria{
+    border-bottom: 1px solid #a1a1a1;
+    padding: 10px 0;
+}
+.titulo{
+    text-align: center;
+    text-shadow:1px 1px rgba(0, 0, 0, 0.42);
+}
+/*Parte onde se altera o header*/
+.topo{
+    background: #000;
+    width: 100%;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.top p{
+    color:#fff;
+    margin:0;
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.icone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 100%;
+    width: 34px;
+    height: 31px;
+    margin: 10px;
+    font-size: 20px;
+    color:#000;
+    cursor: pointer;
+}
+#face:hover{
+    background: #3b5998;
+    color:#fff;
+}
+#insta:hover{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color:#fff;
+}
+#you:hover{
+    background: #c4302b;
+    color:#fff;
+}
+#face:hover .fab{
+    animation-name:moveRedes;
+    animation-duration: .2s; 
+}
+#insta:hover .fab{
+    animation-name:moveRedes;
+    animation-duration: .2s; 
+}
+#you:hover .fab{
+    animation-name:moveRedes;
+    animation-duration: .2s; 
+}
+.logo{
+    width: 350px;
+}
+.logo:after {
+    background: #fff;
+    content: '';
+    height: 88px;
+    left: -73px;
+    opacity: .3;
+    position: absolute;
+    top: -3px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(.19,1,.22,1);
+    width: 50px;
+    z-index: 5;
+}
+.logo:hover:after {
+    left: 94%;
+    transition: all 550ms cubic-bezier(.19,1,.22,1);
+}
+.telefone {
+    padding: 10px;
+    border-left:2px solid transparent;
+    border-right:2px solid transparent;
+    border-radius: 20px;
+}
+.telefone span{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .5s;
+}
+.telefone:hover{
+    border-left:2px solid #c0c0c0;
+    border-right:2px solid #c0c0c0;
+}
+.telefone:hover span:nth-child(1){
+    transform: scale(1.1);
+    transition: .5s;
+}
+.telefone:hover span:nth-child(2){
+    color:#c0c0c0;
+    transition: .5s;
+}
+/*Parte onde faremos as animações*/
+@keyframes moveRedes{
+    0% {transform: translateX(0px);}
+    25% {transform: translateX(-5px);}
+    50% {transform: translateX(0px);}
+    75% {transform: translateX(5px);}
+    100% {transform: translateX(0px);}
+ }
